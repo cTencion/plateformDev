@@ -1,0 +1,12 @@
+{{ form_start(form, {'attr': {'id': 'form'}}) }}
+
+{# NOM #}
+{{ form_label(form.name, 'Nom du format') }}
+{{ form_widget(form.name) }}
+{# DESCRIPTION #}
+{{ form_label(form.type, 'Type du format (icone FontAwesome)') }}
+{{ form_widget(form.type) }}
+{# SAVE #}
+{{ form_widget(form.save, { 'label': 'Enregistrer', 'attr': {'class': 'btn btn-primary'} }) }}
+
+{{ form_end(form) }}

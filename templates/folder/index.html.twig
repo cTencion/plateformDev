@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}LES DOSSIERS
+	{{ parent() }}
+{% endblock %}
+
+{% block body %}
+	<section class="section section-light">
+		<h1>Les dossiers</h1>
+		<div class="dashboard">
+			<aside>
+				{{ include('_folderform.html.twig') }}
+			</aside>
+			<main>
+				<div class="list-folders">
+					{% for folder in folders %}
+						<div class="folder" style="background-color:{{ folder.color }}">
+							<h2>{{ folder.name }}</h2>
+							<div class="folder-btns">
+								<div>
+									<p>Pour trouver toute les ressources :</p>
+									<a href="{{ path('folder_show', { id: folder.id }) }}" class="btn btn-light">Cliquez ici !</a>
+								</div>
+								<div class="btns">
+									<a href="{{ path('folder_edit', { id: folder.id }) }}" class="btn btn-edit">
+										<i class="fa-solid fa-pen-to-square"></i>
+									</a>
+									<a href="{{ path('folder_delete', { id: folder.id }) }}" class="btn btn-trash">
+										<i class="fa-solid fa-trash-can"></i>
+									</a>
+								</div>
+							</div>
+						</div>
+					{% endfor %}
+				</div>
+			</main>
+		</div>
+	</section>
+{% endblock %}

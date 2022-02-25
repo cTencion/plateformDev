@@ -1,0 +1,319 @@
+:root {
+    --light: rgb(240, 240, 240);
+    --dark: rgb(34, 34, 34);
+    --white: white;
+    --primary: orangered;
+    --hover: rgb(183, 0, 255);
+    --red: rgb(255, 0, 0);
+    --yellow: #fffb00;
+    --grey: #7377AD;
+    --blue: #1D4ED8;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: var(--light);
+}
+
+a {
+    text-decoration: none;
+    color: var(--dark);
+}
+
+a, button {
+    transition: all 0.3s;
+}
+
+h1 {
+    font-size: 2rem;
+    text-align: center;
+}
+
+h1, h2 {
+    text-transform: capitalize;
+}
+
+h2 a {
+    color: inherit;
+}
+
+h2 a:hover {
+    color: var(--hover);
+}
+
+#main-header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+}
+
+.navbar a:hover {
+    color: var(--primary);
+}
+
+.logo {
+    width: 15%;
+    min-width: 150px;
+}
+
+.logo img {
+    width: 100%;
+    object-fit: contain;
+}
+
+#main-footer {
+    text-align: center;
+}
+
+.list-ressources, .list-folders, .list-formats {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 1fr);
+    padding: 2rem;
+}
+
+.ressource, .folder, .format {
+    background-color: var(--dark);
+    color: var(--light);
+    margin: 1.5rem;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.folder {
+    color: var(--dark);
+}
+
+.format {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ressource-btns, .folder-btns {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 1rem;
+}
+
+.folder-btns {
+    align-items: flex-start;
+}
+
+.btns {
+    display: flex;
+    gap: 1rem;
+}
+
+#form {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    gap: 1rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    max-width: 768px;
+}
+
+#form label {
+    text-align: center;
+}
+
+#form textarea {
+    resize: vertical;
+}
+
+#form select {
+    width: 10rem;
+    margin: auto;
+}
+
+#form button {
+    align-self: center;
+    border: none;
+    cursor: pointer;
+}
+
+#form img {
+    display: none;
+}
+
+.fa-heart {
+    color: rgb(255, 0, 212);
+}
+
+.dashboard {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+/* AU DESSU C'EST MIEUX */
+/* AU DESSU C'EST MIEUX */
+/* AU DESSU C'EST MIEUX */
+/* AU DESSU C'EST MIEUX */
+/* AU DESSU C'EST MIEUX */
+/* AU DESSU C'EST MIEUX */
+/* AU DESSU C'EST MIEUX */
+/* AU DESSU C'EST MIEUX */
+/* AU DESSU C'EST MIEUX */
+/* AU DESSU C'EST MIEUX */
+/* AU DESSU C'EST MIEUX */
+
+.container {
+    max-width: 1280px !important;
+    margin-right: auto !important;
+    margin-left: auto !important;
+}
+
+.section {
+    padding: 1.5rem 1rem;
+}
+
+.section-primary {
+    background-color: var(--primary);
+    color: var(--light);
+}
+
+.section-dark {
+    background-color: var(--dark);
+    color: var(--light);
+}
+
+.section-light {
+    background-color: var(--white);
+    color: var(--dark);
+}
+
+.btn, .tag {
+    display: inline-block !important;
+    padding: .5rem .75rem !important;
+    border-radius: 6px !important;
+}
+
+.btn-primary {
+    background-color: var(--primary) !important;
+    color: var(--light) !important;
+}
+
+.btn-primary:hover {
+    background-color: var(--hover) !important;
+    color: var(--light) !important;
+}
+
+.btn-light {
+    background-color: var(--light) !important;
+    color: var(--dark) !important;
+}
+
+.btn-light:hover {
+    background-color: var(--hover) !important;
+    color: var(--light) !important;
+}
+
+.btn-dark {
+    background-color: var(--dark) !important;
+    color: var(--light) !important;
+}
+
+.btn-dark:hover {
+    background-color: var(--hover) !important;
+    color: var(--dark) !important;
+}
+
+.btn-trash {
+    background-color: var(--light) !important;
+    color: rgb(52, 155, 11) !important;
+}
+
+.btn-trash:hover {
+    background-color: rgb(52, 155, 11) !important;
+    color: var(--light) !important;
+}
+
+.btn-edit {
+    background-color: var(--light) !important;
+    color: rgb(21, 199, 243) !important;
+}
+
+.btn-edit:hover {
+    background-color: rgb(21, 199, 243) !important;
+    color: var(--light) !important;
+}
+
+.tag-red {
+    background-color: rgb(255, 0, 0);
+    color: var(--light);
+}
+
+.tag-red:hover {
+    background-color: var(--light);
+    color: rgb(255, 0, 0);
+}
+
+.tag-yellow {
+    background-color: var(--yellow);
+    color: var(--dark);
+}
+
+.tag-yellow:hover {
+    background-color: var(--light);
+    color: var(--dark);
+}
+
+.tag-format {
+    background-color: var(--light);
+    color: var(--dark);
+}
+
+.tag-format:hover {
+    background-color: var(--primary);
+    color: var(--light);
+}
+
+@media screen and (min-width: 768px) {
+    .navbar {
+        flex-direction: row;
+        gap: 2rem;
+    }
+
+    .list-ressources, .list-folders, .list-formats {
+        flex-direction: row;
+        grid-template-columns: repeat(auto-fill, 50%);
+    }
+
+    .ressource-btns, .folder-btns {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #form label {
+        text-align: left;
+    }
+
+    #form select {
+        margin: 0;
+    }
+}
+
+
+@media screen and (min-width: 900px) {
+    .dashboard {
+        grid-template-columns: 1fr 3fr;
+    }
+}

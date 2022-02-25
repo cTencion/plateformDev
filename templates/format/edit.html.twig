@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Modifier un format {{ parent() }}{% endblock %}
+
+{% block body %}
+    <section class="section section-light">
+        <h1>Modifier un format</h1>
+        <div class="addFormat">
+            {{ include('_formatform.html.twig') }}
+        </div>
+    </section>
+{% endblock %}

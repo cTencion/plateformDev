@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Les ressources du dossier
+	{{ folder.name }}
+	{{ parent() }}
+{% endblock %}
+
+{% block body %}
+	<section class="section section-light">
+		<h1>Liste des ressources de
+			{{ folder.name }}</h1>
+				<a href="{{ path('ressource_add') }}" class="btn btn-primary">Ajouter une ressource</a>
+				<div class="list-folders">
+					{% for ressource in folder.ressources %}
+						<div class="ressource">
+							<h2><a href="{{ressource.link}}" target="_blank">{{ressource.name}} <i class="fa-solid fa-link"></i></a></h2>
+							<p>{{ressource.description}}</p>
+							<div class="ressource-btns">
+								<div class="badges">
+									<a href="{{ path('folder_show', { id: ressource.folder.id }) }}" class="tag" style="background-color: {{ ressource.folder.color }}">{{ ressource.folder.name }}</a>
+									<a href="#" class="tag tag-format">
+										<i class="fa-solid {{ressource.format.type}}"></i>
+									</a>
+								</div>
+								<div class="badges">
+									<a href="{{ path('ressource_edit', { id: ressource.id }) }}" class="btn btn-edit">
+										<i class="fa-solid fa-pen-to-square"></i>
+									</a>
+									<a href="{{ path('ressource_delete', { id: ressource.id }) }}" class="btn btn-trash">
+										<i class="fa-solid fa-trash-can"></i>
+									</a>
+								</div>
+							</div>
+						</div>
+					{% endfor %}
+				</div>
+			</section>
+		{% endblock %}

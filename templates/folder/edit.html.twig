@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Modifier le dossier  {{ parent() }}{% endblock %}
+
+{% block body %}
+    <section class="section section-light">
+        <h1>Modifier le dossier</h1>
+        <div class="addProject">
+            {{ include('_folderform.html.twig') }}
+        </div>
+    </section>
+{% endblock %}

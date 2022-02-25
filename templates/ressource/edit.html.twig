@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Modifier {{ ressource.name }} {{ parent() }}{% endblock %}
+
+{% block body %}
+    <section class="section section-light">
+        <h1>Modifier {{ ressource.name }} </h1>
+        <div class="editRessource">
+            {{ include('_additform.html.twig') }}
+        </div>
+    </section>
+{% endblock %}

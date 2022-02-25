@@ -1,0 +1,21 @@
+{{ form_start(form, {'attr': {'id': 'form'}}) }}
+
+{# NOM #}
+{{ form_label(form.name, 'Nom de la ressource') }}
+{{ form_widget(form.name) }}
+{# DESCRIPTION #}
+{{ form_label(form.description, 'Description de la ressource') }}
+{{ form_widget(form.description) }}
+{# LINK #}
+{{ form_label(form.link, 'lien vers la ressource') }}
+{{ form_widget(form.link) }}
+{# FOLDER #}
+{{ form_label(form.folder, 'Dossier de la ressource') }}
+{{ form_widget(form.folder) }}
+{# FORMAT #}
+{{ form_label(form.format, 'Format de la ressource') }}
+{{ form_widget(form.format) }}
+{# SAVE #}
+{{ form_widget(form.save, { 'label': 'Enregistrer', 'attr': {'class': 'btn btn-primary'} }) }}
+
+{{ form_end(form) }}

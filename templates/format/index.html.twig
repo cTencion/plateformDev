@@ -1,0 +1,34 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}LES FORMATS
+	{{ parent() }}
+{% endblock %}
+
+{% block body %}
+	<section class="section section-light">
+		<h1>Les formats</h1>
+		<div class="dashboard">
+			<aside>
+				{{ include('_formatform.html.twig') }}
+			</aside>
+			<main>
+				<div class="list-formats">
+					{% for format in formats %}
+						<div class="format">
+							<h2>
+								<i class="fa-solid {{ format.type }} tag tag-format"></i>
+								{{ format.name }}</h2>
+							<div class="format-btns">
+								<a href="{{ path('format_edit', { id: format.id }) }}" class="btn btn-edit">
+									<i class="fa-solid fa-pen-to-square"></i>
+								</a>
+								<a href="{{ path('format_delete', { id: format.id }) }}" class="btn btn-trash">
+									<i class="fa-solid fa-trash-can"></i>
+								</a>
+							</div>
+						</div>
+					{% endfor %}
+				</div>
+			</main>
+		</section>
+	{% endblock %}

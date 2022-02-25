@@ -1,0 +1,12 @@
+{{ form_start(form, {'attr': {'id': 'form'}}) }}
+
+{# NOM #}
+{{ form_label(form.name, 'Nom du dossier') }}
+{{ form_widget(form.name) }}
+{# DESCRIPTION #}
+{{ form_label(form.color, 'Couleur liée au dossier') }}
+{{ form_widget(form.color) }}
+{# SAVE #}
+{{ form_widget(form.save, { 'label': 'Enregistrer', 'attr': {'class': 'btn btn-primary'} }) }}
+
+{{ form_end(form) }}

@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}LES RESSOURCES
+	{{ parent() }}
+{% endblock %}
+
+{% block body %}
+	<section class="section section-primary">
+		<h1>Bienvenue Grand Master</h1>
+		<div class="list-ressources">
+			{% for ressource in ressources %}
+				<div class="ressource">
+					<h2>
+						<a href="{{ressource.link}}" target="_blank">{{ressource.name}}
+							<i class="fa-solid fa-link"></i>
+						</a>
+					</h2>
+					<p>{{ressource.description}}</p>
+					<div class="ressource-btns">
+						<div class="badges">
+							<a href="{{ path('folder_show', { id: ressource.folder.id }) }}" class="tag" style="background-color: {{ ressource.folder.color }}">{{ ressource.folder.name }}</a>
+							<a href="#" class="tag tag-format">
+								<i class="fa-solid {{ressource.format.type}}"></i>
+							</a>
+						</div>
+						<div class="badges">
+							<a href="{{ path('ressource_edit', { id: ressource.id }) }}" class="btn btn-edit">
+								<i class="fa-solid fa-pen-to-square"></i>
+							</a>
+							<a href="{{ path('ressource_delete', { id: ressource.id }) }}" class="btn btn-trash">
+								<i class="fa-solid fa-trash-can"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+			{% endfor %}
+		</div>
+	</section>
+{% endblock %}
